@@ -1,3 +1,5 @@
+import Image from 'next/image';
+import Link from 'next/link';
 import React from 'react';
 
 const AboutPage = () => {
@@ -50,16 +52,20 @@ const AboutPage = () => {
           <h2 className="text-3xl font-semibold text-gray-800 mb-8">Meet Our Team</h2>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
             <div className="text-center">
-              <img
+              <Image
                 src="/team-member1.jpg"
                 alt="John Doe"
                 className="w-40 h-40 rounded-full mx-auto mb-4 object-cover"
+                width={150}
+                height={200}
               />
               <h3 className="text-xl font-semibold text-gray-800">John Doe</h3>
               <p className="text-gray-600">Founder & CEO</p>
             </div>
             <div className="text-center">
-              <img
+              <Image
+              width={100}
+              height={100}
                 src="/team-member2.jpg"
                 alt="Jane Smith"
                 className="w-40 h-40 rounded-full mx-auto mb-4 object-cover"
@@ -86,12 +92,12 @@ const AboutPage = () => {
             Are you passionate about making a difference? Join our innovative team and help us
             create the future.
           </p>
-          <a
+          <Link
             href="/careers"
             className="bg-blue-600 hover:bg-blue-700 text-white py-3 px-8 rounded-full text-lg font-semibold transition-all"
           >
             Explore Careers
-          </a>
+          </Link>
         </div>
       </div>
     </div>

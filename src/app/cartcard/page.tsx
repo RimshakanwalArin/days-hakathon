@@ -20,6 +20,8 @@ const CartCard = (
         <Image src={src} alt={title} width={80}
         height={80}
           />
+          {size}
+          {price}
           <div>           
             {/* <h2>{title}</h2> */}
           </div>
