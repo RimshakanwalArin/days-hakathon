@@ -1,5 +1,5 @@
 import React from 'react';
-import { FaCartShopping } from 'react-icons/fa6';
+
 import BestSellingCard from '../bestSellingCard/page';
 
 const BestSelling = () => {

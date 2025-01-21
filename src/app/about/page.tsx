@@ -8,9 +8,9 @@ const AboutPage = () => {
       <div className="container mx-auto px-6 py-12">
         {/* About Section Header */}
         <div className="text-center mb-16">
-          <h1 className="text-4xl font-bold text-gray-800">About Us</h1>
+          <h1 className="text-4xl imgfont-bold text-gray-800">About Us</h1>
           <p className="text-lg text-gray-600 mt-4">
-            Discover who we are, our story, our team, and our values.
+            Discover who we are our story our team and our values.
           </p>
         </div>
 
@@ -20,7 +20,7 @@ const AboutPage = () => {
             <h2 className="text-3xl font-semibold text-gray-800">Our Mission</h2>
             <p className="text-lg text-gray-700">
               Our mission is to provide exceptional service and quality products that improve the
-              lives of our customers. Through innovation and dedication, we strive to make a
+              lives of our customers. Through innovation and dedication we strive to make a
               positive impact on every person we touch.
             </p>
           </div>
@@ -40,9 +40,9 @@ const AboutPage = () => {
         <div className="text-center mb-16">
           <h2 className="text-3xl font-semibold text-gray-800 mb-8">Our Story</h2>
           <p className="text-lg text-gray-700 max-w-2xl mx-auto">
-            Founded in 2010, we began with a simple idea: to create high-quality, affordable
-            products that make everyday life a little easier. Over the years, we've grown into a
-            company that is trusted by customers around the world, thanks to our commitment to
+            Founded in 2010 we began with a simple idea: to create high-quality
+            products that make everyday life a little easier. Over the years we've grown into a
+            company that is trusted by customers around the world thanks to our commitment to
             quality and exceptional customer service.
           </p>
         </div>
@@ -74,7 +74,9 @@ const AboutPage = () => {
               <p className="text-gray-600">Lead Designer</p>
             </div>
             <div className="text-center">
-              <img
+              <Image
+              width={300}
+              height={300}
                 src="/team-member3.jpg"
                 alt="Tom Lee"
                 className="w-40 h-40 rounded-full mx-auto mb-4 object-cover"
