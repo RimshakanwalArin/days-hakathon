@@ -1,55 +1,107 @@
+
+import SlugCompnent from '@/app/components/slugCompnent';
 import React from 'react';
-import BestSellingCard from '@/app/components/bestSellingCard/page';
+import { FaMinus, FaPlus } from 'react-icons/fa6';
 
-const Cartegory = () => {
-  const bestSell = [
-    {
-      src: '/p1.png',
-      alt: 'white perfume',
-      title: 'White Perfume',
-      descr: 'Best perfume for all occasions',
-      price: 1200,
-      category: 'top',
-      slug: 'white-perfume',
-    },
-    {
-      src: '/p2.png',
-      alt: 'black perfume',
-      title: 'Black Perfume',
-      descr: 'Elegant black fragrance',
-      price: 1500,
-      category: 'luxury',
-      slug: 'black-perfume',
-    },
-    {
-      src: '/p3.png',
-      alt: 'blue perfume',
-      title: 'Blue Perfume',
-      descr: 'Refreshing and cool scent',
-      price: 1000,
-      category: 'casual',
-      slug: 'blue-perfume',
-    },
-  ];
-
+const Slug = () => {
   return (
     <div>
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-        {bestSell.map((item, i) => (
-          <BestSellingCard
-            key={i}
-            src={item.src}
-            alt={item.alt}
-            title={item.title}
-            descr={item.descr}
-            price={item.price}
-            category={item.category}
-            slug={item.slug}
-          />
-        ))}
-      </div>
+      <section className="text-gray-600 body-font overflow-hidden">
+        <div className="container px-5 py-24 mx-auto">
+          <div className="lg:w-4/5 mx-auto flex flex-col lg:flex-row">
+            <img
+              alt="ecommerce"
+              className="lg:w-1/2 w-full lg:h-auto h-64 object-cover object-center rounded"
+              src="/p8.png"
+            />
+            <div className="lg:w-1/2 w-full lg:pl-10 lg:py-6 mt-6 lg:mt-0">
+              <h2 className="text-sm title-font text-gray-500 tracking-widest">
+                RH Brand
+              </h2>
+              <h1 className="text-gray-900 text-3xl title-font font-medium mb-1">
+                Perfume or Attar
+              </h1>
+              {/* Rating */}
+              <div className="rating mb-4">
+                <input type="radio" name="rating-4" className="mask mask-star-2 bg-green-500" />
+                <input type="radio" name="rating-4" className="mask mask-star-2 bg-green-500" defaultChecked />
+                <input type="radio" name="rating-4" className="mask mask-star-2 bg-green-500" />
+                <input type="radio" name="rating-4" className="mask mask-star-2 bg-green-500" />
+                <input type="radio" name="rating-4" className="mask mask-star-2 bg-green-500" />
+              </div>
+              <p className="leading-relaxed mb-6">
+                Bottle Austin listicle pour-over, neutra jean shorts keytar banjo tattooed umami cardigan.
+              </p>
+              <div className="flex mt-6 items-center pb-5 border-b-2 border-gray-100 mb-5">
+                {/* Color Options */}
+                <div className="flex mr-6">
+                  <span className="mr-3">Color</span>
+                  <button className="border-2 border-gray-300 rounded-full w-6 h-6 focus:outline-none" />
+                  <button className="border-2 border-gray-300 ml-1 bg-gray-700 rounded-full w-6 h-6 focus:outline-none" />
+                  <button className="border-2 border-gray-300 ml-1 bg-indigo-500 rounded-full w-6 h-6 focus:outline-none" />
+                </div>
+                {/* Size Selection */}
+                <div className="flex items-center">
+                  <span className="mr-3">Size</span>
+                  <select className="rounded border appearance-none border-gray-300 py-2 focus:outline-none focus:ring-2 focus:ring-indigo-200 focus:border-indigo-500 text-base pl-3 pr-10">
+                    <option>SM</option>
+                    <option>M</option>
+                    <option>L</option>
+                    <option>XL</option>
+                  </select>
+                  <span className="absolute right-0 top-0 h-full w-10 text-center text-gray-600 pointer-events-none flex items-center justify-center">
+                    <svg
+                      fill="none"
+                      stroke="currentColor"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth={2}
+                      className="w-4 h-4"
+                      viewBox="0 0 24 24"
+                    >
+                      <path d="M6 9l6 6 6-6" />
+                    </svg>
+                  </span>
+                </div>
+              </div>
+              {/* Quantity Controls */}
+              <div className="flex items-center mb-5">
+                <button className="bg-black text-white p-2 rounded-l-lg flex items-center">
+                  <FaMinus className="h-4 w-4" />
+                  Less
+                </button>
+                <div className="mx-2">1</div>
+                <button className="bg-black text-white p-2 rounded-r-lg flex items-center">
+                  <FaPlus className="h-4 w-4" />
+                  Add
+                </button>
+              </div>
+              {/* Price and Cart Button */}
+              <div className="flex items-center justify-between">
+                <span className="title-font font-medium text-2xl text-gray-900">$58.00</span>
+                <button className="flex ml-auto text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded">
+                  Add to Cart
+                </button>
+                <button className="rounded-full w-10 h-10 bg-gray-200 p-0 border-0 inline-flex items-center justify-center text-gray-500 ml-4">
+                  <svg
+                    fill="currentColor"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth={2}
+                    className="w-5 h-5"
+                    viewBox="0 0 24 24"
+                  >
+                    <path d="M20.84 4.61a5.5 5.5 0 00-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 00-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 000-7.78z" />
+                  </svg>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+              <SlugCompnent />
     </div>
   );
 };
 
-export default Cartegory;
+export default Slug;

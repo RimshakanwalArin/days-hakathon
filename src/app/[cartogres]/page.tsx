@@ -1,3 +1,5 @@
+
+
 import React from 'react';
 import BestSellingCard from '../components/bestSellingCard/page';
 
