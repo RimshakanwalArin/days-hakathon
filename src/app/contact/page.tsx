@@ -23,26 +23,10 @@ const ContactPage = () => {
     e.preventDefault();
     setIsSubmitting(true);
 
-    try {
-      const response = await fetch('/api/contact', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify(formData),
-      });
+  
 
-      if (response.ok) {
-        setSubmissionStatus('Message sent successfully!');
-      } else {
-        setSubmissionStatus('Failed to send message. Please try again.');
-      }
-    } catch (error) {
-      setSubmissionStatus('An error occurred. Please try again later.');
-    } finally {
-      setIsSubmitting(false);
-    }
-  };
+  
+   };
 
   return (
     <div className="container mx-auto p-6">
